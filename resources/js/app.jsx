@@ -4,8 +4,9 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "../css/app.css";
 import "./bootstrap";
-import Home from "./components/Home";
-import Test from "./components/Test";
+import Home from "./Pages/Home";
+import Product from "./Pages/Product";
+import ProductCreateForm from "./Pages/ProductCreateForm";
 
 // Define the routes
 const routers = [
@@ -14,8 +15,12 @@ const routers = [
         element: <Home />,
     },
     {
-        path: "/test",
-        element: <Test />,
+        path: "/products",
+        element: <Product />,
+    },
+    {
+        path: "/create-product",
+        element: <ProductCreateForm />,
     },
 ];
 
